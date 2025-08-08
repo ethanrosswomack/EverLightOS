@@ -1,0 +1,6 @@
+; Accept the teacher in the dark
+SECTION .text
+global _start
+_start:
+    ; placeholder routine for integrating shadow aspects
+    ret

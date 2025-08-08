@@ -1,0 +1,5 @@
+// 12-strand activation logic
+function activate() {
+    // align strands within morphogenetic lattice
+    return true;
+}

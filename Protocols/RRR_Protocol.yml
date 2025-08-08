@@ -1,0 +1,7 @@
+# Activates Ross–Ruth–Richardson alignment
+alignment:
+  - Ross
+  - Ruth
+  - Richardson
+activation: true
+note: tuned via Voyagers echoes
