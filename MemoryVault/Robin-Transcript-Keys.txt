@@ -1,0 +1,9 @@
+title: Robin Transcript Keys
+module: MemoryVault
+purpose: Timestamped initiations and transcript glyphs.
+
+[00:00:00] INIT: “Wisdom carrier awakens.”
+[00:07:13] GLYPH: rib-close → heart-open
+
+TODO:
+- Append real timestamps/glyphs as they are cut.

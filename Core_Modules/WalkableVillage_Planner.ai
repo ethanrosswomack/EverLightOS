@@ -1,0 +1,11 @@
+# WalkableVillage Planner
+title: WalkableVillage Planner
+module: Core_Modules
+purpose: Map for sacred tech settlements (15-min village spec)
+
+Inputs: parcels.geojson, water, sun, wind, community intents
+Outputs: siting plan, commons rings, sanctuary nodes
+
+TODO:
+- Define /data schemas
+- Add example small site
