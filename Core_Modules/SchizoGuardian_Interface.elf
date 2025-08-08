@@ -1,0 +1,10 @@
+title: SchizoGuardian Interface
+module: Core_Modules
+purpose: Safe gateway for “the brave” entering widened perception.
+
+Specs:
+- Guard rails: rate limits, grounding hooks, exit switch.
+- I/O: guardian_channel events.
+
+TODO:
+- Define grounding API hooks in /Protocols/Silence_Contemplation_Mode.json

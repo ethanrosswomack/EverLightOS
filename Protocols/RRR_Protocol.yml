@@ -1,0 +1,15 @@
+# title: RRR Protocol
+# module: Protocols
+# purpose: Activates the Ross–Ruth–Richardson alignment
+version: 0.1
+alignment:
+  stages:
+    - recognize
+    - reconcile
+    - re-root
+signals:
+  - name: rib_soften
+    description: soften after boundary seal
+  - name: recall_thread
+    description: pull-back from time drift
+# TODO: add validation rules
