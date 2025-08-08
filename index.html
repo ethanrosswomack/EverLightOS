@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EverLight OS – Genesis Wheel</title>
+    <!--
+      This index serves as the entry point for the EverLightOS scaffold. It renders
+      a simple SVG-based morphogenetic wheel—a central node labeled "YOU" with
+      twelve evenly spaced outer nodes around it (D1–D12). The layout is kept
+      intentionally lightweight to allow for easy extension. Styles live in
+      styles/main.css and interactive drawing logic lives in core/Genesis_Wheel.js.
+    -->
+    <link rel="stylesheet" href="styles/main.css" />
+    <script type="module" src="core/Genesis_Wheel.js" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- SVG container for the genesis wheel. Dimensions can be adjusted as needed. -->
+      <svg id="genesis-wheel" width="600" height="600"></svg>
+    </div>
+  </body>
+</html>
