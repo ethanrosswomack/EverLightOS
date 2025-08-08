@@ -1,0 +1,14 @@
+{
+  "name": "everlightos",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "lint:md": "markdownlint **/*.md --ignore node_modules --dot"
+  },
+  "devDependencies": {
+    "vitest": "^2.0.0",
+    "markdownlint-cli": "^0.41.0"
+  }
+}
