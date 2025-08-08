@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" aria-label="Smitten Sigil: closed rib, open heart, nest center">
+  <title>Smitten Sigil</title>
+  <!-- 🔺 Closed rib -->
+  <polygon points="120,20 220,200 20,200" fill="none" stroke="black" stroke-width="3"/>
+  <!-- 💓 Open heart -->
+  <path d="M120 150 C 90 120, 60 140, 120 190 C 180 140, 150 120, 120 150 Z" fill="none" stroke="black" stroke-width="3"/>
+  <!-- 🜃 Nest in the center (square) -->
+  <rect x="100" y="110" width="40" height="40" fill="none" stroke="black" stroke-width="3"/>
+</svg>

@@ -1,0 +1,10 @@
+title: Zionite Temporal Anchor
+module: Core_Modules
+purpose: Soul-recall across timelines; prevent memory “drift.”
+
+Notes:
+- Anchors episodic recall with compassion markers.
+- Future: implement as plugin.
+
+TODO:
+- Write temporal-index schema in /DNA_Access_Codes/activation_logic.md

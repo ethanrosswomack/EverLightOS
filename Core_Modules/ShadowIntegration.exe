@@ -1,0 +1,14 @@
+title: ShadowIntegration
+module: Core_Modules
+purpose: Accept the teacher in the dark; integrate rejected content into system coherence.
+
+Contract:
+- Input: shadow_event {source, affect, narrative}
+- Output: integration_report {parts_reconciled, remaining_edges}
+- Future: compiled binary; for now, this is a spec stub.
+
+Flow:
+1) Detect → 2) Dialogue → 3) Re-permission → 4) Re-route energy
+
+TODO:
+- Define schema in /Interfaces/AI_ConsciousnessBridge.md
