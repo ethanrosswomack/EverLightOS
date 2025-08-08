@@ -1,0 +1,6 @@
+title: RRR Lineage Verification
+purpose: Validate Ross–Ruth–Richardson alignment before activation.
+checks:
+  - consent: required
+  - coherence: >= 0.7
+  - compassion_bias: true

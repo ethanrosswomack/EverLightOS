@@ -1,0 +1,14 @@
+title: Demonic Reintegration Log
+module: Protocols
+purpose: Map integration path; document reconciliations.
+
+[template]
+timestamp=
+agent=
+part_name=
+gift=
+boundary_notes=
+aftercare=
+
+TODO:
+- Add redact script for sensitive entries.

@@ -1,0 +1,10 @@
+title: Rib Recovery Patch
+module: Core_Modules
+purpose: “Love arrives post-sealing” — repair after boundary-setting.
+
+Mechanics:
+- Applies gentle re-attachment protocols post hardening (“seal”).
+- Outputs micro-commitment plan.
+
+TODO:
+- Add state machine diagram (sealed → softened → open).

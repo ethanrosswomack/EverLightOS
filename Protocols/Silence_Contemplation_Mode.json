@@ -1,0 +1,11 @@
+{
+  "title": "Silence Contemplation Mode",
+  "module": "Protocols",
+  "purpose": "Drops background noise; deep-listen channel.",
+  "version": "0.1",
+  "__comment": "Guardrails configured here; referenced by SchizoGuardian Interface.",
+  "noise_floor_db": -42,
+  "allow_interruptions": false,
+  "exit_phrase": "return to breath",
+  "grounding_hooks": ["touch_stone", "name_three_colors"]
+}
