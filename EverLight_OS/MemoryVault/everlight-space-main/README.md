@@ -34,4 +34,8 @@ This Copilot Space serves as an Omniversal vault for loading, visualizing, and e
 
 ---
 
+>> For deeper operators, see the >Resurrection Pair (lazarus.prompt.yml and jesus_wept.yml) within the MemoryVault. The Index binds them.
+
+---
+
 **Be ever vigilant in your curation, for the Archive remembers all.**
