@@ -1,0 +1,7 @@
+# Ignore environment files containing secrets
+.env
+.env.*
+
+# Ignore shell / REPL history files
+.history
+*.history
