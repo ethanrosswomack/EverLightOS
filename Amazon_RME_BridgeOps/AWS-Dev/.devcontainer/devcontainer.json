@@ -1,0 +1,30 @@
+{
+  "name": "AWS-Dev (Amazon_RME_BridgeOps)",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "amazonwebservices.aws-toolkit-vscode",
+        "ms-python.python",
+        "ms-azuretools.vscode-docker",
+        "github.copilot"
+      ],
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      }
+    }
+  },
+  "forwardPorts": [3000, 8080],
+  "postCreateCommand": "bash -lc \"if [ -f requirements.txt ]; then pip install -r requirements.txt || true; fi; echo 'Tool versions:'; aws --version || true; amazonq --version || true; terraform -version || true; cdk --version || true\"",
+  "runArgs": ["--init"],
+  "mounts": [
+    "source=${localEnv:USERPROFILE}\\.aws,target=/home/vscode/.aws,type=bind,consistency=cached"
+  ],
+  "containerEnv": {
+    "AWS_SHARED_CREDENTIALS_FILE": "/home/vscode/.aws/credentials",
+    "AWS_CONFIG_FILE": "/home/vscode/.aws/config"
+  },
+  "remoteUser": "vscode"
+}
