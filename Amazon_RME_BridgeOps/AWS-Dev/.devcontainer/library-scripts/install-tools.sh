@@ -34,9 +34,24 @@ else
 fi
 
 echo "Installing amazonq CLI (if available)..."
-# Placeholder for 'amazonq' install - replace with actual install method
+echo "Installing amazonq CLI via npm (preferred)..."
 if ! command -v amazonq >/dev/null 2>&1; then
-  echo "amazonq not found; skipping installation. If you have an install URL, update this script."
+  # Ensure npm/node present
+  if ! command -v npm >/dev/null 2>&1; then
+    echo "npm not found; installing Node.js 18.x (provides npm)..."
+    curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
+    apt-get update && apt-get install -y nodejs
+  fi
+
+  echo "Installing amazonq from npm (global)..."
+  # Use --no-audit/--no-fund to keep install output concise in CI; allow failure without breaking container build
+  npm install -g amazonq --no-audit --no-fund || true
+
+  if command -v amazonq >/dev/null 2>&1; then
+    echo "amazonq installed: $(amazonq --version 2>&1 | head -n1)"
+  else
+    echo "amazonq install failed or package not available via npm; you can update this script with an alternate install method."
+  fi
 else
   echo "amazonq already installed"
 fi
