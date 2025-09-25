@@ -1,0 +1,2 @@
+[console_scripts]
+apm-assistant = everlight_apm_assistant.cli:main

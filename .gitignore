@@ -5,3 +5,10 @@
 # Ignore shell / REPL history files
 .history
 *.history
+
+# Project artifacts
+runs/
+*.zip
+*.log
+.ipynb_checkpoints/
+

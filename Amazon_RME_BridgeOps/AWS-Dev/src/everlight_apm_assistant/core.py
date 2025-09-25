@@ -2,6 +2,7 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from typing import List, Dict, Any
 
+
 @dataclass
 class Header:
     date: str
@@ -12,6 +13,7 @@ class Header:
     manager_on_duty: str = ""
     notes: str = ""
 
+
 @dataclass
 class Item:
     equipment_id: str
@@ -21,6 +23,7 @@ class Item:
     time_spent_min: int = 5
     work_order: str = ""
     notes: str = ""
+
 
 @dataclass
 class Session:

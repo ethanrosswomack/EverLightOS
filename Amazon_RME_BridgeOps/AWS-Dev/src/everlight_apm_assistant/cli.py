@@ -1,9 +1,12 @@
-import argparse, json, sys
+import argparse
+import json
+import sys
 from .core import Session, Header
 from .storage import new_run_dir, save_all
 from .schema import SESSION_SCHEMA
 
-_current: Session|None = None
+_current: Session | None = None
+
 
 def get_sess() -> Session:
     global _current
@@ -11,6 +14,7 @@ def get_sess() -> Session:
         # fallback empty
         _current = Session(Header(date=""))
     return _current
+
 
 def cmd_new(args):
     global _current
@@ -26,6 +30,7 @@ def cmd_new(args):
     _current = Session(hdr)
     print("Session created.")
 
+
 def cmd_add(args):
     sess = get_sess()
     sess.add_item(
@@ -39,10 +44,12 @@ def cmd_add(args):
     )
     print("Item added.")
 
+
 def cmd_render(args):
     sess = get_sess()
     out = sess.render_text()
     print(out)
+
 
 def cmd_save(args):
     sess = get_sess()
@@ -59,6 +66,7 @@ def cmd_save(args):
     for k, v in paths.items():
         print(f" - {k}: {v}")
 
+
 def cmd_load(args):
     with open(args.path, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -69,6 +77,7 @@ def cmd_load(args):
     global _current
     _current = s
     print("Session loaded.")
+
 
 def main():
     p = argparse.ArgumentParser(prog="apm-assistant", description="Local-first APM assistant")
@@ -109,35 +118,6 @@ def main():
     args = p.parse_args()
     args.func(args)
 
+
 if __name__ == '__main__':
     main()
-import argparse, json, sys
-from .core import Session, Header
-from .storage import new_run_dir, save_all
-from .schema import SESSION_SCHEMA
-
-def validate_session(sess: Session) -> None:
-    import jsonschema
-    jsonschema.validate(sess.to_dict(), SESSION_SCHEMA)
-
-def cmd_save(args):
-    sess = get_sess()
-    if getattr(args, "validate", False):
-        try:
-            validate_session(sess)
-        except Exception as e:
-            print(f"Schema validation failed: {e}")
-            sys.exit(1)
-    run_dir = new_run_dir(args.out)
-    paths = save_all(sess, run_dir)
-    print("Saved:")
-    for k, v in paths.items():
-        print(f" - {k}: {v}")
-
-def main():
-    # ... unchanged ...
-    s = sub.add_parser("save", help="Save paste.txt, csv, json into runs/")
-    s.add_argument("--out", help="Custom output directory")
-    s.add_argument("--validate", action="store_true", help="Validate schema before saving")
-    s.set_defaults(func=cmd_save)
-    # ... unchanged ...
