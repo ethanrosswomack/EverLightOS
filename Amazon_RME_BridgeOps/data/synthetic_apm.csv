@@ -1,0 +1,11 @@
+work_order_id,org,priority,type,status,equipment,shift,dept,description
+10038554138,TPA4,5,Preventive maintenance,Open,TPA4-pa6vra03 ARSAW 318,TA4D,RME,AMER-ARSAW 4 Week PM
+10038554139,TPA4,3,Corrective maintenance,Open,TPA4-conv-belt-01,TA4A,RME,Belt alignment issue - vibration detected
+10038554140,TPA4,1,Safety inspection,Open,TPA4-emergency-stop-02,TA4B,RME,Monthly safety system check
+10038554141,TPA4,4,Preventive maintenance,Open,TPA4-motor-drive-05,TA4C,RME,Quarterly motor maintenance
+10038554142,TPA4,2,Corrective maintenance,In Progress,TPA4-sensor-temp-08,TA4D,RME,Temperature sensor replacement
+10038554143,TPA4,5,Preventive maintenance,Open,TPA4-hydraulic-pump-12,TA4A,RME,6-month hydraulic system service
+10038554144,TPA4,3,Corrective maintenance,Open,TPA4-plc-rack-03,TA4B,RME,PLC communication fault
+10038554145,TPA4,1,Safety inspection,Open,TPA4-fire-suppression-01,TA4C,RME,Fire suppression system test
+10038554146,TPA4,4,Preventive maintenance,Open,TPA4-compressor-air-07,TA4D,RME,Air compressor filter change
+10038554147,TPA4,2,Corrective maintenance,Open,TPA4-scanner-barcode-15,TA4A,RME,Barcode scanner calibration needed
