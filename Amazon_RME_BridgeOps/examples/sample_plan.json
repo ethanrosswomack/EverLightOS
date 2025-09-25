@@ -1,0 +1,37 @@
+{
+  "work_order_id": "10038554138",
+  "classification": "PM",
+  "steps": [
+    {
+      "action": "open_apm_wo",
+      "why": "Access work order details",
+      "fields": {
+        "id": "10038554138"
+      }
+    },
+    {
+      "action": "open_pm_procedure",
+      "why": "Load maintenance procedure",
+      "fields": {
+        "template": "pm_standard",
+        "equip": "TPA4-pa6vra03 ARSAW 318"
+      }
+    },
+    {
+      "action": "fill_checklist",
+      "why": "Complete maintenance checklist",
+      "fields": {
+        "checklist": "pm_standard"
+      }
+    }
+  ],
+  "parts_needed": [],
+  "attachments": [
+    {
+      "type": "job_aid",
+      "template": "pm_standard",
+      "notes": "Standard PM procedure"
+    }
+  ],
+  "risk_flags": []
+}

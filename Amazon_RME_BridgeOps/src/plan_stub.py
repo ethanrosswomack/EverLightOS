@@ -56,23 +56,44 @@ def generate_plan(wo):
     
     return base_plan
 
-def process_work_orders(input_file, output_dir):
+def process_work_orders(input_file, output_dir, use_q=False):
     """Process normalized work orders and generate plans"""
     os.makedirs(output_dir, exist_ok=True)
+    
+    # Import Q client if available
+    try:
+        from q_client import call_amazon_q
+        q_available = True
+    except ImportError:
+        q_available = False
+        print("Q client not available, using rule-based planning")
     
     with open(input_file, 'r') as f:
         for line in f:
             wo = json.loads(line.strip())
-            plan = generate_plan(wo)
+            
+            if use_q and q_available:
+                plan = call_amazon_q(wo, use_q=True)
+            else:
+                plan = generate_plan(wo)
             
             output_file = f"{output_dir}/{wo['work_order_id']}.json"
             with open(output_file, 'w') as plan_file:
                 json.dump(plan, plan_file, indent=2)
             
-            print(f"Generated plan for WO {wo['work_order_id']}")
+            method = "Q" if (use_q and q_available) else "rules"
+            print(f"Generated plan for WO {wo['work_order_id']} ({method})")
 
 if __name__ == "__main__":
+    import sys
     input_file = "out/normalized.jsonl"
     output_dir = "out/plans"
-    process_work_orders(input_file, output_dir)
+    use_q = "--use-q" in sys.argv
+    
+    if use_q:
+        print("🤖 Using Amazon Q for planning")
+    else:
+        print("📋 Using rule-based planning")
+    
+    process_work_orders(input_file, output_dir, use_q)
     print(f"Plans saved to {output_dir}/")

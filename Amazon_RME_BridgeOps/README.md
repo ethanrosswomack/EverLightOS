@@ -2,34 +2,38 @@
 
 Minimal APM workflow automation that integrates with existing Taskmonkey processes.
 
-## Architecture
-
-```
-APM Export → Normalizer → Q Analyzer → Action Plan → Taskmonkey Runner
-```
-
 ## Quick Start
 
 ```bash
-# Run full demo
-make demo
+make demo          # Full pipeline demo (rule-based)
+make demo-q        # Demo with Amazon Q integration
+make run-dry WO=X  # Test specific work order
+make run-live WO=X # Execute live (manager approval required)
+```
 
-# Generate plans only
-make plan
+## Architecture
 
-# Test specific work order (dry-run)
-make run-dry WO=10038554138
-
-# Execute live (use with caution)
-make run-live WO=10038554138
+```
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+│ APM Export  │───▶│ Normalizer  │───▶│ Q Analyzer  │───▶│ Action Plan │
+│ (CSV/API)   │    │ (canonical) │    │ (AI/Rules)  │    │ (JSON)      │
+└─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
+                                                                   │
+                                                                   ▼
+┌─────────────┐    ┌─────────────┐                      ┌─────────────┐
+│ Audit Log   │◀───│ Taskmonkey  │◀─────────────────────│ TM Adapter  │
+│ (decisions) │    │ Runner      │                      │ (commands)  │
+└─────────────┘    └─────────────┘                      └─────────────┘
 ```
 
 ## Components
 
 - **Normalizer** (`src/normalize.py`) - Convert CSV to canonical schema
-- **Planner** (`src/plan_stub.py`) - Generate action plans (rule-based + Q integration ready)
-- **Adapter** (`src/tm_adapter.py`) - Convert plans to Taskmonkey commands
+- **Q Client** (`src/q_client.py`) - Amazon Q integration with safe fallback
+- **Planner** (`src/plan_stub.py`) - Generate action plans (rule-based + Q ready)
+- **TM Adapter** (`src/tm_adapter.py`) - Convert plans to Taskmonkey commands
 - **Synthetic Data** (`data/synthetic_apm.csv`) - Safe test data
+- **Examples** (`examples/`) - Sample artifacts and outputs
 
 ## Data Policy
 

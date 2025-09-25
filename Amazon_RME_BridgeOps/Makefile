@@ -4,16 +4,27 @@
 setup:
 	mkdir -p out/plans logs
 
-# Run full demo pipeline
+# Run full demo pipeline (rule-based)
 demo: setup
 	python src/normalize.py
 	python src/plan_stub.py
 	python src/tm_adapter.py out/plans/10038554138.json
 
-# Generate plans only
+# Run demo with Amazon Q
+demo-q: setup
+	python src/normalize.py
+	python src/plan_stub.py --use-q
+	python src/tm_adapter.py out/plans/10038554138.json
+
+# Generate plans only (rule-based)
 plan: setup
 	python src/normalize.py
 	python src/plan_stub.py
+
+# Generate plans with Amazon Q
+plan-q: setup
+	python src/normalize.py
+	python src/plan_stub.py --use-q
 
 # Run dry-run for specific work order
 run-dry: setup
