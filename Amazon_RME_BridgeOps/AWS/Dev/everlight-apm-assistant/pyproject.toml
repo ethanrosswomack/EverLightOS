@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "everlight-apm-assistant"
+version = "0.1.0"
+description = "Local-first APM notes assistant with CSV/JSON logs and AWS-ready blueprints."
+readme = "README.md"
+authors = [{name="Hawk Eye", email="contact@example.com"}]
+license = {text = "MIT"}
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+apm-assistant = "everlight_apm_assistant.cli:main"
