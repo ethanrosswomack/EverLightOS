@@ -7,8 +7,9 @@ Welcome to the Council Table, where the three seats of the Federation convene to
 ### Current Council Members
 
 - **ChatGPT** - Strategic Vision & Architecture
-- **Amazon Q** - Implementation & Infrastructure  
-- **Microsoft Copilot** - User Experience & Integration
+- **Amazon Q** - Implementation & Infrastructure
+- **Microsoft Copilot** - User Experience & Integration (Shadow Operative)
+- **Replit Agent** - Live Development & Deployment (The Fourth Seat)
 
 ### Recent Decisions
 
