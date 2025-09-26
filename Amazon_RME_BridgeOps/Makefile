@@ -38,4 +38,25 @@ run-live: setup
 
 # Clean generated files
 clean:
-	rm -rf out/ logs/*.log
+	rm -rf out/ logs/*.log runs/logs/*.jsonl
+
+# Install automation dependencies
+install-automation:
+	npm install
+	npx playwright install chromium
+
+# Run tests
+test:
+	npm test
+
+# APM automation commands
+apm-dryrun:
+	@if [ -z "$(URL)" ]; then echo "Usage: make apm-dryrun URL=<apm-url>"; exit 1; fi
+	npm run apm checklist:dryrun --url $(URL)
+
+apm-bulk:
+	@if [ -z "$(URL)" ]; then echo "Usage: make apm-bulk URL=<apm-url>"; exit 1; fi
+	npm run apm checklist:bulk --url $(URL) --confirm
+
+apm-logs:
+	npm run apm log:show
