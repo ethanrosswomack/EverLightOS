@@ -11,6 +11,12 @@ header {
   background-color: #2E2E3A;
 }
 
+.logo {
+  height: 80px;
+  width: auto;
+  margin-bottom: 1rem;
+}
+
 nav a {
   margin: 0 1rem;
   color: #00FFFF;
