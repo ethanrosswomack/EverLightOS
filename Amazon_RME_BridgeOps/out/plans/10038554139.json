@@ -1,0 +1,36 @@
+{
+  "work_order_id": "10038554139",
+  "classification": "CM",
+  "steps": [
+    {
+      "action": "open_apm_wo",
+      "why": "Access work order details",
+      "fields": {
+        "id": "10038554139"
+      }
+    },
+    {
+      "action": "request_parts",
+      "why": "Check parts availability",
+      "fields": {
+        "equipment": "TPA4-conv-belt-01"
+      }
+    },
+    {
+      "action": "escalate_training",
+      "why": "Verify technician qualification",
+      "fields": {
+        "equipment_type": "TPA4-conv-belt-01"
+      }
+    }
+  ],
+  "parts_needed": [
+    {
+      "sku": "",
+      "desc": "TBD based on diagnosis",
+      "qty": 1
+    }
+  ],
+  "attachments": [],
+  "risk_flags": []
+}

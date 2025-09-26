@@ -1,0 +1,33 @@
+{
+  "work_order_id": "10038554140",
+  "classification": "Safety",
+  "steps": [
+    {
+      "action": "open_apm_wo",
+      "why": "Access work order details",
+      "fields": {
+        "id": "10038554140"
+      }
+    },
+    {
+      "action": "open_pm_procedure",
+      "why": "Load safety procedure",
+      "fields": {
+        "template": "safety_inspection",
+        "equip": "TPA4-emergency-stop-02"
+      }
+    },
+    {
+      "action": "fill_checklist",
+      "why": "Complete safety checklist",
+      "fields": {
+        "checklist": "safety_inspection"
+      }
+    }
+  ],
+  "parts_needed": [],
+  "attachments": [],
+  "risk_flags": [
+    "requires_manager_review"
+  ]
+}
