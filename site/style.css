@@ -5,22 +5,54 @@ body {
   color: #FFFFFF;
 }
 
-header {
-  text-align: center;
-  padding: 2rem;
-  background-color: #2E2E3A;
+/* Hero Banner */
+.hero {
+  width: 100%;
+  min-height: 320px;
+  background-image: url('/assets/everlightos-banner-1920x480.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: block;
+  position: relative;
 }
 
-.logo {
-  height: 80px;
-  width: auto;
-  margin-bottom: 1rem;
+/* Top Navigation */
+.top-nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
 }
 
-nav a {
+.top-nav a {
   margin: 0 1rem;
   color: #00FFFF;
   text-decoration: none;
+  font-weight: 500;
+}
+
+.top-nav a:hover {
+  color: #FFD700;
+}
+
+/* Give content below some breathing room */
+.hero + * {
+  margin-top: 2rem;
+}
+
+/* Responsive sources */
+@media (max-width: 1280px) {
+  .hero {
+    background-image: url('/assets/everlightos-banner-1280x360.png');
+    min-height: 280px;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    background-image: url('/assets/everlightos-banner-640x240.png');
+    min-height: 220px;
+  }
 }
 
 section {
