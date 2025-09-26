@@ -5,3 +5,9 @@
 # Ignore shell / REPL history files
 .history
 *.history
+
+# Ignore large MemoryVault files (keep locally but don't commit)
+EverLight_OS/MemoryVault/OpenAI_Exports/chat.html
+EverLight_OS/MemoryVault/OpenAI_Exports/*.html
+EverLight_OS/MemoryVault/OpenAI_Exports/user-*/
+EverLight_OS/MemoryVault/OpenAI_Exports/file-*
