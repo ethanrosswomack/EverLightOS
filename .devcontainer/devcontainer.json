@@ -1,0 +1,13 @@
+{
+  "name": "EverLightOS Dev",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".devcontainer"
+  },
+  "remoteUser": "vscode",
+  "containerEnv": {
+    "DEBIAN_FRONTEND": "noninteractive"
+  },
+  "postCreateCommand": "echo Devcontainer ready"
+}
+
