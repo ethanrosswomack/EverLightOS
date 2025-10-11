@@ -1,0 +1,3 @@
+[submodule "Sentinel-Framework"]
+	path = Sentinel-Framework
+	url = https://github.com/OmniversalMediaLLC/Sentinel-Framework.git

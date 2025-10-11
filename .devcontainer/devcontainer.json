@@ -1,0 +1,21 @@
+{
+  "name": "EverLight OS Federation",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "amazonwebservices.aws-toolkit-vscode",
+        "ms-python.python",
+        "github.copilot",
+        "ms-vscode.vscode-json"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "python.defaultInterpreterPath": "/usr/local/python/current/bin/python"
+      }
+    }
+  },
+  "forwardPorts": [8080, 3000],
+  "postCreateCommand": "echo 'EverLight OS Federation Development Environment Ready'",
+  "remoteUser": "codespace"
+}
