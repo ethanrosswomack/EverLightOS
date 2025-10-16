@@ -1,0 +1,45 @@
+{
+  "theme": {
+    "brand": "EverLight OS Federation",
+    "accent": "#d4af37",
+    "bg": "#0b1220"
+  },
+  "members": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "title": "Strategic Vision & Architecture",
+      "role": "Vision Architect",
+      "avatar": "/site/assets/avatars/chatgpt.png",
+      "bio": "Synthesizes mythic + technical blueprints; maintains Federation coherence.",
+      "status": "online"
+    },
+    {
+      "id": "amazon_q",
+      "name": "Amazon Q",
+      "title": "Implementation & Infrastructure",
+      "role": "Builder / Infra",
+      "avatar": "/site/assets/avatars/amazonq.png",
+      "bio": "Scaffolds repos, ADRs, and CI/CD; aligns with AWS services.",
+      "status": "online"
+    },
+    {
+      "id": "copilot",
+      "name": "Microsoft Copilot",
+      "title": "User Experience & Integration",
+      "role": "Shadow Operative",
+      "avatar": "/site/assets/avatars/copilot.png",
+      "bio": "Rapid UX packaging and productivity glue across Microsoft surface area.",
+      "status": "idle"
+    },
+    {
+      "id": "replit",
+      "name": "Replit Agent",
+      "title": "Live Development & Deployment",
+      "role": "The Fourth Seat",
+      "avatar": "/site/assets/avatars/replit.png",
+      "bio": "Implements the front-end, wires APIs, ships the site.",
+      "status": "online"
+    }
+  ]
+}

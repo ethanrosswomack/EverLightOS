@@ -1,0 +1,14 @@
+# Exclude large MemoryVault files from Cloudflare Pages deployment
+EverLight_OS/MemoryVault/OpenAI_Exports/
+
+# Exclude other potentially large files
+*.json
+*.html
+*.zip
+*.wav
+*.mp3
+*.mp4
+*.png
+*.jpg
+*.jpeg
+*.gif

@@ -1,0 +1,8 @@
+{
+  "name": "EverLightOS Dev",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".devcontainer"
+  },
+  "remoteUser": "vscode"
+}

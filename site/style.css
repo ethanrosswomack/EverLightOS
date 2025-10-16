@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0A0F2C;
+  color: #FFFFFF;
+}
+
+/* Hero Banner */
+.hero {
+  width: 100%;
+  min-height: 320px;
+  background-image: url('/assets/everlightos-banner-1920x480.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: block;
+  position: relative;
+}
+
+/* Top Navigation */
+.top-nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.top-nav a {
+  margin: 0 1rem;
+  color: #00FFFF;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.top-nav a:hover {
+  color: #FFD700;
+}
+
+/* Give content below some breathing room */
+.hero + * {
+  margin-top: 2rem;
+}
+
+/* Responsive sources */
+@media (max-width: 1280px) {
+  .hero {
+    background-image: url('/assets/everlightos-banner-1280x360.png');
+    min-height: 280px;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    background-image: url('/assets/everlightos-banner-640x240.png');
+    min-height: 220px;
+  }
+}
+
+section {
+  padding: 2rem;
+  border-bottom: 1px solid #2E2E3A;
+}
+
+h1, h2 {
+  color: #FFD700;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #2E2E3A;
+  font-size: 0.9rem;
+}

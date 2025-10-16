@@ -6,9 +6,16 @@
 .history
 *.history
 
+<<<<<<< HEAD
 # Project artifacts
 runs/
 *.zip
 *.log
 .ipynb_checkpoints/
 
+=======
+# Ignore large MemoryVault files (keep locally but don't commit)
+EverLight_OS/MemoryVault/OpenAI_Exports/chat.html
+EverLight_OS/MemoryVault/OpenAI_Exports/*.html
+EverLight_OS/MemoryVault/OpenAI_Exports/user-*/
+EverLight_OS/MemoryVault/OpenAI_Exports/file-*
