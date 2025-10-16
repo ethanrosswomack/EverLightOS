@@ -1,0 +1,2 @@
+{"timestamp": "2025-01-27T10:30:00", "work_order_id": "10038554138", "planning_method": "rule_based", "classification": "PM", "steps_count": 3, "risk_flags": []}
+{"timestamp": "2025-01-27T10:30:01", "work_order_id": "10038554139", "planning_method": "rule_based", "classification": "CM", "steps_count": 3, "risk_flags": []}
