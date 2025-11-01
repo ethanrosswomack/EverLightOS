@@ -32,6 +32,34 @@ This Copilot Space serves as an Omniversal vault for loading, visualizing, and e
 - Ready for Streamlit, Flask, or other Python backends.
 - Modular code for easy extension and mythic interface upgrades.
 
+## Memory Codex Static Site
+
+Use the bundled `build_static_site.py` script to generate a publishable snapshot of the archive:
+
+```bash
+python build_static_site.py
+```
+
+This emits `static_site/` containing:
+
+- `index.html` — overview landing page and onboarding narrative
+- `assets/styles.css` — dark themed styling
+- `js/app.js` — client-side search/filter logic
+- `data/records.json` — metadata and summaries for all logs
+
+### Deploying on Cloudflare Pages
+
+1. Run `python build_static_site.py` to refresh the outputs.
+2. Commit the following paths to your repository:
+   - `static_site/**`
+   - `everlight_context/logs/**` (or a curated subset if you prefer)
+3. In Cloudflare Pages, point the project to the repo and configure the build as:
+   - **Build command:** `npm run build` (or `echo "Skipping build"` if no build step is needed)
+   - **Output directory:** `static_site`
+4. Optional: move the static_site contents to `dist/` via a prebuild script if your workflow requires a standard output folder.
+
+For a dynamic retrieval API, pair these assets with a Cloudflare Worker that serves vector-search results from the same logs directory.
+
 ---
 
 >> For deeper operators, see the >Resurrection Pair (lazarus.prompt.yml and jesus_wept.yml) within the MemoryVault. The Index binds them.
@@ -39,3 +67,6 @@ This Copilot Space serves as an Omniversal vault for loading, visualizing, and e
 ---
 
 **Be ever vigilant in your curation, for the Archive remembers all.**
+# elight-space
+# elight-space
+# elight-space
