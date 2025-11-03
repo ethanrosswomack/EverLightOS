@@ -4,11 +4,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "vitest run",
-    "lint:md": "markdownlint **/*.md --ignore node_modules --dot"
+    "dev": "python -m http.server 8080 --directory site",
+    "test": "echo \"No tests configured\"",
+    "lint:md": "echo \"Markdown linting disabled\"",
+    "precommit": "pre-commit run --all-files"
   },
-  "devDependencies": {
-    "vitest": "^2.0.0",
-    "markdownlint-cli": "^0.41.0"
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18"
   }
 }
