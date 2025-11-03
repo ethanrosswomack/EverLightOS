@@ -17,7 +17,7 @@
     }
   },
   "forwardPorts": [3000, 8080],
-  "postCreateCommand": "bash -lc \"if [ -f requirements.txt ]; then pip install -r requirements.txt || true; fi; echo 'Tool versions:'; aws --version || true; amazonq --version || true; terraform -version || true; cdk --version || true\"",
+  "postCreateCommand": "bash -lc \"if [ -f requirements.txt ]; then pip install -r requirements.txt || true; fi; make setup; echo 'Tool versions:'; aws --version || true; amazonq --version || true; terraform -version || true; cdk --version || true; echo 'APM Assistant ready - run: make demo'\"",
   "runArgs": ["--init"],
   "mounts": [
     "source=${localEnv:USERPROFILE}\\.aws,target=/home/vscode/.aws,type=bind,consistency=cached"

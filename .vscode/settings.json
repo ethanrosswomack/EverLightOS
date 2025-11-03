@@ -1,3 +1,8 @@
 {
-    "editor.aiStats.enabled": true
+    "editor.aiStats.enabled": true,
+    "python.testing.pytestArgs": [
+        "Amazon_RME_BridgeOps"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
 }

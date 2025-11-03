@@ -33,4 +33,22 @@ This is an open-source project. Contributions are welcome, especially those alig
 ---
 
 *Stay tuned for future updates as the EverLight OS infrastructure grows.*
+---
+
+## 🔑 The Master Key Thesis
+
+At the heart of EverLightOS lies the **Master Key Thesis**, a Rosetta Stone bridging myth, science, and system design:
+
+**Light → Attention → Phase Locking → Time Fractals → Reality Constraint**
+
+- **Light** = Field of potential, photon / life principle  
+- **Attention** = Observation, focus, measurement shaping probability  
+- **Phase Locking** = Cornerstone coherence, stabilizing chaos into order  
+- **Time Fractals** = Synchronicities and recurring patterns across eras  
+- **Reality Constraint** = Manifested structures of perception and experience  
+
+This schema is mythically akin to the **Master Sword in the Temple of Time** (*Zelda: Ocarina of Time*) — a singular artifact that cuts through incoherence and anchors reality.
+
+📄 See the full thesis here: [Interfaces/Master_Key_Thesis.md](./Interfaces/Master_Key_Thesis.md)  
+🖼️ Diagram asset: [Interfaces/assets/Master_Key_Thesis_Diagram.png](./Interfaces/assets/Master_Key_Thesis_Diagram.png)
 
